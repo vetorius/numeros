@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -9,6 +7,23 @@
 	<!-- Latest compiled and minified CSS -->
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 
+<!-- Latest compiled and minified JavaScript -->
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+<script type="text/javascript">
+    $('document').ready(function() {
+
+    $('#cursos a').click(function(event) {
+
+    	var href = $(this).attr('href');
+
+    	$('#lista').html('<img src="images/loader.gif" alt="loader">')
+        $('#lista').load(href);
+        event.preventDefault();
+    	}); 
+    });
+ </script>
 </head>
 <body>
 
@@ -21,41 +36,16 @@
 </nav>
 
 <div class="container-fluid">
-	<div class="row">
-		<div class="col-sm-3 col-md-2">
-			<ul id="cursos" class="nav nav-tabs">
-				<li><a data-target="#lista" href="datos.php?curso=1">1º E.S.O.</a></li>
-				<li><a data-target="#lista" href="datos.php?curso=2">2º E.S.O.</a></li>
-				<li><a data-target="#lista" href="datos.php?curso=3">3º E.S.O.</a></li>
-				<li><a data-target="#lista" href="datos.php?curso=4">4º E.S.O.</a></li>
-				<li><a data-target="#lista" href="datos.php?curso=5">1º Bachillerato</a></li>
-				<li><a data-target="#lista" href="datos.php?curso=6">2º Bachillerato</a></li>
-			</ul>
-		</div>
-		<div class="tab-content col-sm-9 col-md-10">
-			<h2 class="page-header">Alumnos por materias</h2>
-			<div class="tab-pane" id="lista"></div>
-		</div>
-	</div>
+	<ul id="cursos" class="nav nav-tabs">
+		<li><a href="datos.php?curso=1">1º E.S.O.</a></li>
+		<li><a href="datos.php?curso=2">2º E.S.O.</a></li>
+		<li><a href="datos.php?curso=3">3º E.S.O.</a></li>
+		<li><a href="datos.php?curso=4">4º E.S.O.</a></li>
+		<li><a href="datos.php?curso=5">1º Bachillerato</a></li>
+		<li><a href="datos.php?curso=6">2º Bachillerato</a></li>
+	</ul>
+	<div id="lista">&nbsp;</div>
 </div>
 
-<!-- Latest compiled and minified JavaScript -->
-<script src="js/bootstrap.min.js"></script>
-<script src="js/jquery.js"></script>
-
-<script type="text/javascript">
-	$(function() {
-	  $("#cursos").tabs();
-	});
-
-	$(document).ready(function() {
-	  $("#cursos").bind("show", function(e) {    
-	    var contentURL = $(e.target).attr("href");
-	    if (typeof(contentURL) != 'undefined')
-	      $('#lista').load(contentURL, function(data){ $this.html(data); });
-	  });
-	});
-
-</script>
 </body>
 </html>

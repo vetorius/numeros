@@ -9,21 +9,6 @@
 	<!-- Latest compiled and minified CSS -->
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 
-	<script type="text/javascript">
-	$(function() {
-	  $("#cursos").tabs();
-	});
-
-	$(document).ready(function() {
-	  $("#cursos").bind("show", function(e) {    
-	    var contentURL = $(e.target).attr("href");
-	    if (typeof(contentURL) != 'undefined')
-	      $('#lista').load(contentURL, function(data){ $this.html(data); });
-	  });
-	});
-
-	</script>
-
 </head>
 <body>
 
@@ -56,6 +41,21 @@
 
 <!-- Latest compiled and minified JavaScript -->
 <script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.js"></script>
 
+<script type="text/javascript">
+	$(function() {
+	  $("#cursos").tabs();
+	});
+
+	$(document).ready(function() {
+	  $("#cursos").bind("show", function(e) {    
+	    var contentURL = $(e.target).attr("href");
+	    if (typeof(contentURL) != 'undefined')
+	      $('#lista').load(contentURL, function(data){ $this.html(data); });
+	  });
+	});
+
+</script>
 </body>
 </html>

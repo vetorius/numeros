@@ -65,7 +65,7 @@ class Modelo {
 			return 0;
 		}
 		// definimos la consulta
-		$sql  = "SELECT ma.id_materia, CONVERT(ma.materia USING utf8), count(id_alumno) as total 
+		$sql  = "SELECT ma.id_materia, CONVERT(ma.materia USING utf8) as materia, count(id_alumno) as total 
 			FROM alu_mat am INNER JOIN materias ma USING(id_materia)
 			WHERE ma.id_curso=$curso GROUP BY ma.id_materia";
 

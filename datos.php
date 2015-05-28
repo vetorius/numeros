@@ -25,8 +25,13 @@ if (isset($_GET['curso'])) {
 	$base = new Modelo($sql_base, $sql_host, $sql_user, $sql_pass);
 	$base->conectar() or die ('Error: ' . $base->Error);
 	$resultado = $base->contaralumnos($_GET['curso']);
-	echo '<pre>';
-	print_r($resultado);
-	echo '</pre>';
+?>
+<table class="table table-hover">
+<tr><th>Materia</th><th>total</th></tr>
+<?php
+    foreach ($resultado as $materia){
+        echo '<tr><td class="col-md-6">'.$materia['materia'].'</td><td>'.$materia['total'].'</td></tr>';
+    }
+    echo '</table>';
 }
 ?>

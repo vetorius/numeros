@@ -44,7 +44,7 @@
 		<li><a href="datos.php?curso=5">1º Bachillerato</a></li>
 		<li><a href="datos.php?curso=6">2º Bachillerato</a></li>
 	</ul>
-	<div id="lista">&nbsp;</div>
+	<div id="lista" class="container">&nbsp;</div>
 </div>
 
 </body>

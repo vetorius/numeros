@@ -1,3 +1,4 @@
+<?php
 /*
  * Gestion de libros
  *
@@ -20,3 +21,4 @@ $sql_host = "localhost";	// Host, nombre del servidor o IP del servidor Mysql.
 $sql_user = "USUARIO";		// Usuario de Mysql
 $sql_pass = "PASSWORD";		// contraseña de Mysql
 $sql_base = "BASE";	        // Base de datos que se usará.
+?>

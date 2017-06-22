@@ -67,7 +67,7 @@ class Modelo {
 		// definimos la consulta
 		$sql  = "SELECT ma.id_materia, CONVERT(ma.materia USING utf8) as materia, count(id_alumno) as total 
 			FROM alu_mat am INNER JOIN materias ma USING(id_materia)
-			WHERE ma.id_curso=$curso GROUP BY ma.id_materia";
+			WHERE ma.id_curso=$curso GROUP BY ma.id_materia ORDER BY ma.tipo, ma.materia";
 
 		//ejecutamos la consulta
 		mysql_set_charset('utf8');

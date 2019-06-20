@@ -23,7 +23,7 @@ include 'include/config.php';
 
 function devuelveBarra ($totalAlumnos, $curso) {
 
-    $ratio = array(30,30,30,30,35,35);
+    $ratio = array(27,27,27,27,32,32);
 
     $respuesta = '<div class="progress">';
 
@@ -47,7 +47,7 @@ function devuelveBarra ($totalAlumnos, $curso) {
         $respuesta .='%"><span class="sr-only">35% Complete (success)</span></div>';
         $respuesta .= '<div class="progress-bar progress-bar-danger" style="width: ';
         $respuesta .= $totalAlumnos - (2 * $ratio[$curso - 1]);
-        $respuesta .='%"><span class="sr-only">35% Complete (success)</span></div>';           
+        $respuesta .='%"><span class="sr-only">35% Complete (success)</span></div>';
     }
     $respuesta .= '</div>';
     return $respuesta;

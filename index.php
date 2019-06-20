@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Previsión alumnos :: curso 2016-2016</title>
+	<title>Previsión alumnos :: curso 2019-2020</title>
 	<!-- Latest compiled and minified CSS -->
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 
@@ -30,7 +30,7 @@
 <nav class="navbar navbar-inverse">
 	<div class="container-fluid">
 		<div class="navbar-header">
-			<a class="navbar-brand" href="#">Previsión de alumnos <small>Curso 2015-2016</small></a>
+			<a class="navbar-brand" href="#">Previsión de alumnos <small>Curso 2019-2020</small></a>
 		</div>
 	</div>
 </nav>
